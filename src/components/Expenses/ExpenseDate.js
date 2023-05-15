@@ -1,4 +1,4 @@
-import './ExpenseDate.css';
+import styles from './ExpenseDate.module.css';
 
 const ExpenseDate = (props) => {
 	const date = props.date;
@@ -7,10 +7,10 @@ const ExpenseDate = (props) => {
 	const day = date.toLocaleDateString('en-US', { day: 'numeric' });
 
 	return (
-		<div className="expense-date">
-			<div className="expense-date__month">{month}</div>
-			<div className="expense-date__year">{year}</div>
-			<div className="expense-date__day">{day}</div>
+		<div className={styles['expense-date']}>
+			<div className={styles['expense-date__month']}>{month}</div>
+			<div className={styles['expense-date__year']}>{year}</div>
+			<div className={styles['expense-date__day']}>{day}</div>
 		</div>
 	);
 };
