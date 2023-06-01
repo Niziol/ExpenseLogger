@@ -44,10 +44,10 @@ const App = () => {
 	};
 
 	return (
-		<div>
+		<React.Fragment>
 			<NewExpense onAddExpense={addExpenseHandler} />
 			<Expenses expenses={expenses} />
-		</div>
+		</React.Fragment>
 	);
 };
 
